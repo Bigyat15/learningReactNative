@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, View,Text, useColorScheme } from 'react-native';
+import { StyleSheet, View, Text, useColorScheme } from 'react-native';
 import "../global.css"
-import { Slot, Stack } from 'expo-router';
+import { Stack } from 'expo-router';
 import { Colors } from '../constants/Colors';
 import { StatusBar } from 'expo-status-bar';
 
@@ -11,18 +11,17 @@ const RootLayout = () => {
     console.log(colorScheme)
     return (
         <>
-        <StatusBar value="auto"/>
-        <Stack screenOptions={{
-            headerStyle: {backgroundColor: theme.navBackground},
-            headerTintColor: theme.title,
-        }}>
-            <Stack.Screen name="index" options={{title : 'Home' }} />
-            <Stack.Screen name="about" options={{title: "About"}} />
-            <Stack.Screen name="contact" options={{title: "Contact"}} />
-        </Stack>
-
+            <StatusBar value="auto" />
+            <Stack screenOptions={{
+                headerStyle: { backgroundColor: theme.navBackground },
+                headerTintColor: theme.title,
+            }}>
+                <Stack.Screen name="index" options={{ title: 'Home' }} />
+                <Stack.Screen name="about" options={{ title: "About" }} />
+                <Stack.Screen name="contact" options={{ title: "Contact" }} />
+                <Stack.Screen name='(auth)' options={{headerShown:false}} />
+            </Stack>
         </>
-        
     );
 }
 

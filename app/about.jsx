@@ -1,13 +1,16 @@
 import React from 'react';
-import { View, Text, useColorScheme } from 'react-native';
+import { View } from 'react-native';
+import { useColorScheme } from 'react-native';
+
 import { useRouter } from 'expo-router';
 import { TouchableOpacity } from 'react-native';
 import { Colors } from '../constants/Colors';
-import { ThemedText } from '../components/ThemedText';
+import  ThemedText  from '../components/ThemedText';
 
 const About = () => {
     const router = useRouter();
     const colorScheme = useColorScheme();
+    console.log(colorScheme)
     const theme = Colors[colorScheme] ?? Colors.light
   return (
     <View className="flex-1 items-center" style={{backgroundColor:theme.background}}>
