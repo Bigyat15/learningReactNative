@@ -3,12 +3,15 @@ import { StyleSheet, View,Text, useColorScheme } from 'react-native';
 import "../global.css"
 import { Slot, Stack } from 'expo-router';
 import { Colors } from '../constants/Colors';
+import { StatusBar } from 'expo-status-bar';
 
 const RootLayout = () => {
     const colorScheme = useColorScheme();
     const theme = Colors[colorScheme] ?? Colors.light
     console.log(colorScheme)
     return (
+        <>
+        <StatusBar value="auto"/>
         <Stack screenOptions={{
             headerStyle: {backgroundColor: theme.navBackground},
             headerTintColor: theme.title,
@@ -17,6 +20,9 @@ const RootLayout = () => {
             <Stack.Screen name="about" options={{title: "About"}} />
             <Stack.Screen name="contact" options={{title: "Contact"}} />
         </Stack>
+
+        </>
+        
     );
 }
 

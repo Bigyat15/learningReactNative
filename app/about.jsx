@@ -9,14 +9,17 @@ const About = () => {
     const colorScheme = useColorScheme();
     const theme = Colors[colorScheme] ?? Colors.light
   return (
-    <View className="flex items-center mt-4" style={{backgroundColor:theme.background}}>
+    <View className="flex-1 items-center" style={{backgroundColor:theme.background}}>
+      <View className="flex-1 items-center justify-center">
       <TouchableOpacity
       onPress={() => router.push("/")}
       activeOpacity={0.7}
-      className="px-8 py-2 bg-green-200 rounded-full"
+      className="px-8 py-2 bg-green-200 rounded-full flex justify-between"
       >
         <Text>Return Home</Text>
       </TouchableOpacity>
+      </View>
+      
     </View>
   );
 };
