@@ -3,6 +3,7 @@ import { View, Text, useColorScheme } from 'react-native';
 import { useRouter } from 'expo-router';
 import { TouchableOpacity } from 'react-native';
 import { Colors } from '../constants/Colors';
+import { ThemedText } from '../components/ThemedText';
 
 const About = () => {
     const router = useRouter();
@@ -16,9 +17,9 @@ const About = () => {
       activeOpacity={0.7}
       className="px-8 py-2 bg-green-200 rounded-full flex justify-between"
       >
-        <Text>Return Home</Text>
+        <ThemedText>Return Home</ThemedText>
       </TouchableOpacity>
-      <Text >Hello</Text>
+      <ThemedText >Hello</ThemedText>
       </View>
       
     </View>
