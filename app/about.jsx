@@ -18,6 +18,7 @@ const About = () => {
       >
         <Text>Return Home</Text>
       </TouchableOpacity>
+      <Text >Hello</Text>
       </View>
       
     </View>

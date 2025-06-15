@@ -1,15 +1,16 @@
 import React from 'react';
-import { TouchableOpacity, View, Text, Image, Button } from 'react-native';
+import { TouchableOpacity, View,  Text } from 'react-native';
 import Logo from '../assets/img/black-card.png'
 import { useRouter } from 'expo-router';
-
+import ThemedView from '../components/ThemedView';
+import ThemedLogo from '../components/ThemedLogo';
 import "../global.css"
 const Home = () => {
     const router = useRouter()
     return (
-        <View className="flex-1 justify-center items-center">
-            <View className="flex items-center justify-center bg-white">
-                <Image source={Logo} className="w-32 h-32" resizeMode="contain" />
+        <ThemedView className="flex-1  justify-center items-center dark:text-white">
+            <View className="flex items-center justify-center">
+                <ThemedLogo  className="w-32 h-32" resizeMode="contain" />
             </View>
             <View className="mt-2">
                 <Text className="text-center">The Number 1</Text>
@@ -33,7 +34,7 @@ const Home = () => {
                 </TouchableOpacity>
             </View>
 
-        </View>
+        </ThemedView>
     );
 }
 
