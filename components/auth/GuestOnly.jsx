@@ -2,6 +2,8 @@ import { useRouter } from "expo-router"
 import { useEffect, useState } from "react"
 import { Text } from "react-native"
 import { useUser } from "../../hooks/useUser"
+import ThemedView from "../ThemedView"
+import ThemedLoader from "../ThemedLoader"
 
 const GuestOnly = ({children}) =>{
     const {user, authChecked } = useUser()
@@ -15,9 +17,9 @@ const GuestOnly = ({children}) =>{
 
     if(!authChecked || user){
         return(
-            <Text>
-                Loading.....
-            </Text>
+            <ThemedView className="flex-1 justify-center items-center">
+                <ThemedLoader />
+            </ThemedView>
         )
     }
     return children
