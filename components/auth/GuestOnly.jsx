@@ -1,9 +1,10 @@
 import { useRouter } from "expo-router"
 import { useEffect, useState } from "react"
 import { Text } from "react-native"
+import { useUser } from "../../hooks/useUser"
 
 const GuestOnly = ({children}) =>{
-    const {user, authChecked } = useState(false)
+    const {user, authChecked } = useUser()
     const router = useRouter()
 
     useEffect(() => {
@@ -19,5 +20,6 @@ const GuestOnly = ({children}) =>{
             </Text>
         )
     }
+    return children
 }
 export default GuestOnly
