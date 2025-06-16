@@ -49,6 +49,13 @@ const Home = () => {
                         Register
                     </ThemedText>
                 </TouchableOpacity>
+                <TouchableOpacity
+                onPress={() => router.push("/create")}
+                activeOpacity={0.7}
+                className="px-8 py-2 bg-green-200 rounded-full"
+                >
+                    <ThemedText>Create</ThemedText>
+                </TouchableOpacity>
             </View>
 
         </ThemedView>

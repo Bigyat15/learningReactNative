@@ -31,7 +31,8 @@ export class login extends Component {
           <ThemedText className="underline ml-3">
             Create one
           </ThemedText>
-          <ThemedText className="underline">
+          <ThemedText
+          className="underline">
             Forgot Password?
           </ThemedText>
         </ThemedView>

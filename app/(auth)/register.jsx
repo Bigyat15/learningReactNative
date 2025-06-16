@@ -1,13 +1,16 @@
 import React from 'react';
 import ThemedText from '../../components/ThemedText';
 import ThemedView from '../../components/ThemedView';
-import { TouchableOpacity } from 'react-native';
+import { Pressable, TouchableOpacity,View } from 'react-native';
 import { useRouter } from 'expo-router';
+import { useState } from 'react';
 
 const Register = () => {
-    const router = useRouter()
+    const router = useRouter();
+    
     return (
         <ThemedView className="flex-1 items-center justify-center">
+            
             <TouchableOpacity
             onPress={() => router.push("/login")}
             activeOpacity={0.7}

@@ -4,7 +4,7 @@ import { Colors } from '../constants/Colors';
 
 const ThemedCard = ({style, ...props}) => {
     const themedScheme = useColorScheme()
-    const theme = Colors[themedScheme]
+    const theme = Colors[themedScheme] ?? ColorSpace.light
     return (
         <View
         className="rounded-lg p-4"
