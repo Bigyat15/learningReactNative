@@ -28,7 +28,7 @@ const DashboardLayout = () => {
                 <Ionicons size={20} name={focused ? "book-outline" : "book"} color={focused ? theme.iconColorFocused: theme.iconColor } />
             )}} />
             <Tabs.Screen name="create" options={{title:'Create',tabBarIcon:({focused}) => (
-                <Ionicons name={focused ? "pencil-outline" : "pencil"} size={20} color={focused ? theme.iconColorFocused : theme.iconColor}/>
+                <Ionicons name={focused ? "create-outline" : "create"} size={20} color={focused ? theme.iconColorFocused : theme.iconColor}/>
             )}} />
         </Tabs>
     );

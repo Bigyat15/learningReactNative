@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import ThemedText from '../../components/ThemedText'
+import ThemedView from '../../components/ThemedView'
 
 export class books extends Component {
   render() {
     return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
+      <ThemedView className="flex-1 items-center" safe={true}>
+        <ThemedText className='text-xl font-bold'>You Reading list</ThemedText>
+      </ThemedView>
     )
   }
 }
