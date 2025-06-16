@@ -1,23 +1,32 @@
 import React, { useState } from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity,Text,View } from 'react-native';
 import { useRouter } from 'expo-router';
 import { FontAwesome } from '@expo/vector-icons';
 import { useColorScheme } from 'react-native';
-
 import ThemedText from '../../components/ThemedText';
 import ThemedView from "../../components/ThemedView";
 import ThemedTextInput from '../../components/ThemedTextInput';
 import { Colors } from '../../constants/Colors';
+import { useUser } from '../../hooks/useUser';
 
 const Login = () => {
   const router = useRouter();
   const [email,setEmail] = useState('');
   const [password,setPassword] = useState('');
+  const { login } = useUser()
+  const [error,setError] = useState(null);
+  
   const colorScheme = useColorScheme();
   const theme = Colors[colorScheme] ?? Colors.light;
 
-  const handelSubmit = () => {
-    console.log("Login form submitted" ,email,password);
+  const handelSubmit = async () => {
+    setError(null)
+    try{
+      await login(email,password)
+    }catch(error){
+      setError(error.message)
+      console.log(err)
+    }
   }
 
 
@@ -66,6 +75,14 @@ const Login = () => {
         <FontAwesome name="sign-in" size={18} />
         <ThemedText className="text-white font-bold">Login</ThemedText>
       </TouchableOpacity>
+
+      {error && (
+  <View className=" border border-white my-2 bg-red-400 p-2 rounded max-w-80">
+    <Text className="text-red-800 text-center">
+      {error}
+    </Text>
+  </View>
+)}
 
       <ThemedText className="text-sm">
         By Signing In, I accept the terms & conditions
