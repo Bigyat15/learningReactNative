@@ -1,6 +1,6 @@
 {
   "expo": {
-    "scheme":"shelfieapp",
+    "scheme": "shelfieapp",
     "name": "internstudy",
     "slug": "internstudy",
     "version": "1.0.0",
@@ -14,7 +14,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.internstudy"
     },
     "android": {
       "adaptiveIcon": {

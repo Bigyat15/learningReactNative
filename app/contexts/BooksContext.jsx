@@ -11,32 +11,32 @@ export function BooksProvider({children}){
     async function fetchBooks(){
         try{
 
-        }catch(Error){
-            console.log(Error.message)
+        }catch(error){
+            console.log(error.message)
         }
     }
 
-    async function fetchBookById({children}){
+    async function fetchBookById(id){
         try{
 
-        }catch(Error){
-            console.log(Error.message);
+        }catch(error){
+            console.log(error.message);
         }
     }
 
-    async function createBook({children}){
+    async function createBook(data){
         try{
 
-        }catch(Error){
-            console.log(Error.message)
+        }catch(error){
+            console.log(error.message)
         }
     }
 
-    async function deleteBook({children}){
+    async function deleteBook(id){
         try{
 
-        }catch(Error){
-            console.log(Error.message)
+        }catch(error){
+            console.log(error.message)
         }
     }
 
@@ -49,3 +49,4 @@ export function BooksProvider({children}){
     )
 
 }
+export default BooksProvider
